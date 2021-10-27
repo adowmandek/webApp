@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <h1>Kitchen Menus List</h1>
+    <style>
+        body{
+            background-color: rgb(194, 160, 225);
+            /* color: rgb(213, 21, 21); */
+        }
+
+        table, th, td {
+  border: 1px solid black;
+}
+table {
+  width: 70%;
+  text-align: center;
+}
+
+        * {
+            font-family: 'Raleway', sans-serif;
+        }
+        body {
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        h1 {
+            text-align: center;
+            color: #260818;
+        }
+        table {
+            text-align: center;
+            font-size: 20px;
+            width: 85%;
+            margin: auto;
+            margin-top: 40px;
+        }
+        table tr :nth-child(odd) {
+            background: #C0AEC4;
+        }
+        table tr :nth-child(even) {
+            background: #d2d6db;
+        }
+        th,
+        td {
+            padding: 8px;
+            opacity: 0.9;
+        }
+        #row {
+            background-color: #a756a7;
+            color: #a0d5de;
+        }
+        th {
+            background-color: #A0DED3;
+        }
+    </style>
+    
+
+<table>
+    <tr>
+        <th id="row">name</th>
+        <th id="row">price</th>
+        <th id="row">quantity</th>
+        <th>Edit</th>
+        <th>Delete</th>
+</tr>
+    <!-- {  % for menu in menus % } -->
+<tr>
+    <td>{{menulist_app.name}}</td>
+    <td>{{ menulist_app.Price}}</td>
+    <td>{{menulist_app.quantity}}</td>
+    <td><a href="{% url 'edit_menu 'id=menu.id% }">edit</a></td>
+    <td><a href="{% url 'delete_menu 'id=menu.id% }">delete</a></td>
+</tr>
+<!-- { % endfor % } -->
+</table>
+</body>
+</html>
