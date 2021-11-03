@@ -80,16 +80,15 @@ select{
           height: 50px;
       }
 </style>
-      <div class="wrapper">
-    <div class="form">
-    <form method="POST">
-        {%csrf_token%}
-        <h1>Menu Registration form</h1>
-
-        {{form.as_p}}
-        <button>Submit</button>
-    </form>
-</div>
+<div class="wrapper">
+        <div class="form">
+        <form method="POST">
+            {%csrf_token%}
+            <h1>Menu Registration form</h1>
+            {{form.as_p}}
+            <button>Submit</button>
+        </form>
+    </div>
 </div>
 </body>
 </html>
